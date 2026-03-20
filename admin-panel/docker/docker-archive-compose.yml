@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  arms_sagittarius_react:
+    build:
+      dockerfile: docker/dockerfile
+      context: ../
+    container_name: $CI_JOB_NAME-$GROUP_NAME-$APP_NAME
+    ports: ['10703:80']
+    logging:
+      options:
+        max-size: 100m
+    entrypoint: ['nginx', '-g', 'daemon off;']
+    restart: always
+    # networks:
+    #   - common
+# networks:
+#   common:
+#     name: common-local
+#     external: true

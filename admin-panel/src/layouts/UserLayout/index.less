@@ -1,0 +1,71 @@
+.user-layout-wrap {
+  position: relative;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  //background: #ffffff url('@/assets/images/user-layout-bg.png') center center no-repeat;
+  //background-size: cover;
+
+  .user-layout-bg {
+    position: absolute;
+    //top: 200px;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(
+        135deg,
+        rgb(114, 46, 209) 0%,
+        rgb(22, 119, 255) 30%,
+        rgb(245, 34, 45) 70%,
+        rgb(19, 194, 194) 100%
+      )
+      0% 0% / 200% 200%;
+    transform: translateX(-50%) scale(1.5);
+    opacity: 0.2;
+    filter: blur(69px);
+    animation: 10s ease 0s infinite normal none running glow;
+    pointer-events: none;
+    will-change: transform;
+    /* stylelint-disable-next-line property-no-unknown */
+    animation-timeline: auto;
+    /* stylelint-disable-next-line property-no-unknown */
+    animation-range-start: normal;
+    /* stylelint-disable-next-line property-no-unknown */
+    animation-range-end: normal;
+  }
+
+  .header-wrap {
+    height: auto;
+    padding: 34px 3rem;
+    line-height: initial;
+    background: transparent;
+
+    .logo-wrap {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+
+      .logo {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+
+      .text {
+        font-weight: bold;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .parsec-layout-content {
+    position: relative;
+  }
+
+  .parsec-layout-footer {
+    color: #8d8d8d;
+    text-align: center;
+    background: transparent;
+  }
+}

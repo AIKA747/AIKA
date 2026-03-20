@@ -1,0 +1,393 @@
+{
+  "data": [
+    {
+      "name": "Analytics",
+      "type": "MENU",
+      "route": "/analytics",
+      "sortNo": 1,
+      "parentId": "0",
+      "defaultResource": false,
+      "icon": "DashboardOutlined",
+      "paths": "",
+      "id": "1760478670839468034",
+      "children": [
+        {
+          "name": "Subscriptions",
+          "type": "MENU",
+          "route": "/analytics/subscriptions",
+          "sortNo": 1,
+          "parentId": "1760478670839468034",
+          "defaultResource": false,
+          "icon": "DashboardOutlined",
+          "paths": ""
+        },
+        {
+          "name": "UserAnalytics",
+          "type": "MENU",
+          "route": "/analytics/user",
+          "sortNo": 2,
+          "parentId": "1760478670839468034",
+          "defaultResource": false,
+          "icon": "DashboardOutlined",
+          "paths": ""
+        },
+        {
+          "name": "IncomeAnalytics",
+          "type": "MENU",
+          "route": "/analytics/income",
+          "sortNo": 3,
+          "parentId": "1760478670839468034",
+          "defaultResource": false,
+          "icon": "DashboardOutlined",
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760488261406474242",
+      "name": "Bot management",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/bot",
+      "sortNo": 2,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "",
+          "name": "Bot Category",
+          "parentId": "1760488261406474242",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/bot/category",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Bot Built-in",
+          "parentId": "1760488261406474242",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/bot/built-in",
+          "sortNo": 2,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Bot User-created",
+          "parentId": "1760488261406474242",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/bot/user-created",
+          "sortNo": 3,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Bot Explore",
+          "parentId": "1760488261406474242",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/bot/explore",
+          "sortNo": 4,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760492591681421313",
+      "name": "Story Management",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/story",
+      "sortNo": 3,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "",
+          "name": "Story Management",
+          "parentId": "1760492591681421313",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/story/list",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Gift Management",
+          "parentId": "1760492591681421313",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/story/gift/list",
+          "sortNo": 2,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760492703602229250",
+      "name": "Financial management",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/financial",
+      "sortNo": 4,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "",
+          "name": "Order information",
+          "parentId": "1760492703602229250",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/financial/orderInformation",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Service pack management",
+          "parentId": "1760492703602229250",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/financial/servicePackManagement",
+          "sortNo": 2,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760492805901303810",
+      "name": "User management",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/userManagement",
+      "sortNo": 5,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "",
+          "name": "User View",
+          "parentId": "1760492805901303810",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/userManagement/userView",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Group management",
+          "parentId": "1760492805901303810",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/userManagement/groupManagement",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1790898190298431489",
+      "name": "Support Management",
+      "route": "/supportManagement",
+      "parentId": "0",
+      "type": "MENU",
+      "sortNo": 6,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "1805117870080327682",
+          "name": "FeedbackList",
+          "route": "/supportManagement/feedbacklist",
+          "parentId": "1790898190298431489",
+          "type": "MENU",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": null,
+          "name": "Report Statistics",
+          "route": "/supportManagement/reportstatistics",
+          "parentId": "1790898190298431489",
+          "type": "MENU",
+          "sortNo": 2,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760492970661953538",
+      "name": "System management",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/systemManagement",
+      "sortNo": 7,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "",
+          "name": "Admin management",
+          "parentId": "1760492970661953538",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/systemManagement/adminManagement",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Permission management",
+          "parentId": "1760492970661953538",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/systemManagement/permissionManagement",
+          "sortNo": 2,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "1760516724884553730",
+          "name": "Dictionary setting",
+          "parentId": "1760492970661953538",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/systemManagement/dictionarySetting",
+          "sortNo": 3,
+          "defaultResource": false,
+          "paths": "",
+          "children": [
+            {
+              "id": "",
+              "name": "Interest list",
+              "parentId": "1760516724884553730",
+              "type": "MENU",
+              "icon": "DashboardOutlined",
+              "route": "/systemManagement/dictionarySetting/interestList",
+              "sortNo": 1,
+              "defaultResource": false,
+              "paths": ""
+            },
+            {}
+          ]
+        },
+        {
+          "id": "1763489659462680578",
+          "name": "Assistant Setting",
+          "parentId": "1760492970661953538",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/systemManagement/assistant-setting",
+          "sortNo": 4,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760493014450487298",
+      "name": "Notifications",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/notifications",
+      "sortNo": 9,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": [
+        {
+          "id": "",
+          "name": "Push-notifications",
+          "parentId": "1760493014450487298",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/notifications/pushNotifications",
+          "sortNo": 1,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Email logs",
+          "parentId": "1760493014450487298",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/notifications/emailLogs",
+          "sortNo": 2,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "SMS logs",
+          "parentId": "1760493014450487298",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/notifications/sMSLogs",
+          "sortNo": 3,
+          "defaultResource": false,
+          "paths": ""
+        },
+        {
+          "id": "",
+          "name": "Operation logs",
+          "parentId": "1760493014450487298",
+          "type": "MENU",
+          "icon": "DashboardOutlined",
+          "route": "/notifications/operationLogs",
+          "sortNo": 4,
+          "defaultResource": false,
+          "paths": ""
+        }
+      ]
+    },
+    {
+      "id": "1760493282919497729",
+      "name": "User",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/user",
+      "sortNo": 15,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": []
+    },
+    {
+      "id": "1760493327551086593",
+      "name": "Register",
+      "parentId": "0",
+      "type": "MENU",
+      "icon": "DashboardOutlined",
+      "route": "/register",
+      "sortNo": 20,
+      "defaultResource": false,
+      "paths": "",
+      "childrens": []
+    }
+  ]
+}

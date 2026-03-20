@@ -1,0 +1,175 @@
+.parsec-pro-page-container-children-container-no-header {
+  padding-block-start: 0;
+}
+
+.parsec-pro-page-container-children-container {
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline: 20%;
+}
+
+.parsec-btn-primary {
+  color: #A07BED;
+  background: #0B0C0A;
+  border-color: #A07BED;
+}
+
+.parsec-input-outlined {
+  color: #A07BED;
+
+  /* background: #ffffff; */
+  background: transparent !important;
+  border-color: #d9d9d9;
+  border-style: solid;
+  border-width: 2px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+
+  &:hover, &:focus {
+    border-color:  #A07BED;
+  }
+}
+
+.parsec-col-16 {
+  max-width: 100%;
+}
+
+.wk-email-input {
+  border-radius: 0;
+}
+
+.parsec-form-item-explain-error {
+  padding: 0 5%;
+}
+
+// 密码输入框
+.parsec-input-affix-wrapper {
+  border-radius: 0;
+
+  .parsec-icon.parsec-input-password-icon {
+    color: #fff;
+  }
+
+  .parsec-icon.parsec-input-password-icon:hover {
+    // color: rgba(0, 0, 0, 88%);
+    color: #fff;
+  }
+
+  > input.parsec-input::placeholder {
+    color: rgba(250, 250, 250, 60%); // 修改placeholder文本颜色为红色
+    font-style: italic; // 修改placeholder文本样式为斜体
+  }
+}
+
+// 邮箱输入框
+.parsec-form-item-control-input-content > input.parsec-input::placeholder {
+  color: rgba(250, 250, 250, 60%); // 修改placeholder文本颜色为红色
+  font-style: italic; // 修改placeholder文本样式为斜体
+}
+
+.parsec-form-item-has-error {
+  .parsec-row.parsec-form-item-row {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.page-container {
+  min-width: 800px;
+}
+
+.email-setpass-input {
+  position: relative;
+  height: 100vh;
+  padding: 13% 0;
+  background: #0B0C0A;
+}
+
+.section {
+  width: 100%;
+  min-width: 360px;
+  margin: 3.6em auto;
+  color: #fff;
+  text-align: center;
+}
+
+.p1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.p2 {
+  margin-top: 10px;
+  padding: 0 1.6em;
+  font-size: 16px;
+  text-align: left;
+}
+
+.p3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 1.6em;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+}
+
+.icon {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 70px;
+  height: 70px;
+  background-image: url('/src/assets/images/icon.png');
+  background-size: contain;
+  border-radius: 5%;
+}
+
+.br {
+  display: none;
+}
+
+.click {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.click:hover {
+  color: aqua;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0;
+    font-size: 15px;
+  }
+}
+
+/* 针对较小的屏幕（如平板电脑）的样式 */
+@media screen and (max-width: 768px) {
+  .page-container {
+    min-width: 0;
+  }
+
+  body {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  div:has(.email-setpass-input) {
+    padding: 0;
+  }
+
+  .icon {
+    top: 5%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+  }
+
+  .br {
+    display: inline;
+  }
+}

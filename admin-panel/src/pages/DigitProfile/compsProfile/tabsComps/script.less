@@ -1,0 +1,21 @@
+.parsec-card.hide {
+  .parsec-card-body {
+    display: none;
+  }
+}
+
+.parsec-icon.parsec-icon-sound {
+  &.on {
+    animation: change 0.4s infinite;
+  }
+}
+
+@keyframes change {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
