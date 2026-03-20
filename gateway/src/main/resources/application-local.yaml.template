@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: aika-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedHeaders: '*'
+            allowedMethods: '*'
+            allowedOrigins: '*'
+      routes:
+        - id: aika-user-service
+          uri: lb://aika-user-service
+          predicates:
+            - Path=/user/**
+        - id: aika-bot-service
+          uri: lb://aika-bot-service
+          predicates:
+            - Path=/bot/**
+        - id: aika-content-service
+          uri: lb://aika-content-service
+          predicates:
+            - Path=/content/**
+        - id: aika-order-service
+          uri: lb://aika-order-service
+          predicates:
+            - Path=/order/**
+        - id: aika-chat-service
+          uri: lb://aika-chat-service
+          predicates:
+            - Path=/chat/**
+        - id: aika-admin-service
+          uri: lb://aika-admin-service
+          predicates:
+            - Path=/admin/**
+    nacos:
+      config:
+        enabled: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+custom:
+  systemSwitch: false
+  systemMessage: System maintenance in progress, please try again later
+
+jwt:
+  key: cf44088ed94e455b804ee7c8c666f88d
+  expireDays: 30

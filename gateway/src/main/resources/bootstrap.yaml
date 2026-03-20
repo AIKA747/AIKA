@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: aika-gateway
+  cloud:
+    nacos:
+      username: ${NACOS_USERNAME:}
+      password: ${NACOS_PASSWORD:}
+      server-addr: ${NACOS_ADDR:localhost:8848}
+      config:
+        namespace: ${NACOS_NS:public}
+        file-extension: yaml
+        extension-configs[0]:
+          data-id: jwt-key.yaml
+          refresh: true
+      discovery:
+        namespace: ${NACOS_NS:public}
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: reactive
