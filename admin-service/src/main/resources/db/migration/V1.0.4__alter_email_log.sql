@@ -1,0 +1,1 @@
+alter table `email_log` modify column content text DEFAULT NULL COMMENT '邮件内容';

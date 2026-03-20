@@ -1,0 +1,1 @@
+alter table `user` modify column avatar varchar(255) DEFAULT NULL COMMENT '头像';

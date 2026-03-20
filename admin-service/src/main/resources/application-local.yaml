@@ -1,0 +1,33 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /admin
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password: 123456
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/aika_admin?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      config:
+        enabled: false
+feign:
+  sentinel:
+    enabled: true
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+jwt:
+  key: cf44088ed94e455b804ee7c8c666f88d
+  expireDays: 30
