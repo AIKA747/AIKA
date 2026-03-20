@@ -1,0 +1,1 @@
+ALTER TABLE `t_story_recorder` ADD COLUMN `deleted` TINYINT DEFAULT 0 NULL AFTER `status`;

@@ -1,0 +1,1 @@
+INSERT INTO `t_follow_relation`(creator, followingId, `type`, dataVersion, deleted) VALUES (1, 1, 'BOT', 0, 0);

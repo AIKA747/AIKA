@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: aika-content-service
+  cloud:
+    nacos:
+      username: ${NACOS_USERNAME:}
+      password: ${NACOS_PASSWORD:}
+      server-addr: ${NACOS_ADDR:}
+      config:
+        namespace: ${NACOS_NS:public}
+        file-extension: yaml
+        extension-configs[0]:
+          data-id: rabbitmq.yaml
+      discovery:
+        namespace: ${NACOS_NS:public}

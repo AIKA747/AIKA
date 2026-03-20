@@ -1,0 +1,45 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /content
+spring:
+  rabbitmq:
+    host: rabbitmq
+  data:
+    redis:
+      host: redis
+      port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql/aika_content?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: passwd
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    clean-on-validation-error: true
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+feign:
+  sentinel:
+    enabled: true
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+ai:
+  openai:
+    proxy:
+      enabled: false
+      host: 127.0.0.1
+      port: 7980
+    api-key: 123456
+    temp-file-dir: /aika/gpt/files

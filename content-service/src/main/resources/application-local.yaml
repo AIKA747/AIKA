@@ -1,0 +1,45 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /content
+spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      password: 123456
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/aika_content?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      config:
+        enabled: false
+feign:
+  sentinel:
+    enabled: true
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+ai:
+  temp-file-dir: /aika/gpt/files
+  openai:
+    api-key: sk-123456
+    model: gpt-5-nano
+    url: https://api.openai.com/v1/chat/completions
+    proxy:
+      enabled: true
+      host: 127.0.0.1
+      port: 7890
+  deepseek:
+    api-key: sk-123456
+    model: deepseek-chat
+    url: https://api.deepseek.com/chat/completions

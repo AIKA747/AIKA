@@ -1,0 +1,1 @@
+ALTER TABLE `t_story_chat_log` CHANGE `creator` `creator` BIGINT NOT NULL COMMENT '创建人id';

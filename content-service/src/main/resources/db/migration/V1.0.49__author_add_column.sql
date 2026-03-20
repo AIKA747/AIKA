@@ -1,0 +1,2 @@
+ALTER TABLE `t_author`
+    ADD COLUMN `caseCleanAt` DATETIME DEFAULT '2000-01-01 00:00:00' NOT NULL COMMENT '作者敏感帖子敏感数清空时间' AFTER `bio`;

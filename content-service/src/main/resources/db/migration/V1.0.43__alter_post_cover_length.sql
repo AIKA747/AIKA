@@ -1,0 +1,2 @@
+ALTER TABLE `t_post`
+    CHANGE `cover` `cover` VARCHAR(500) CHARSET utf8mb4 DEFAULT '' NOT NULL;

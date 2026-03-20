@@ -1,0 +1,1 @@
+ALTER TABLE `t_play_log` CHANGE `storyRecordId` `storyRecorderId` BIGINT NOT NULL, ADD COLUMN `deleted` TINYINT DEFAULT 0 NULL AFTER `dataVersion`;

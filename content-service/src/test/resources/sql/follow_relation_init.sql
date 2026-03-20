@@ -1,0 +1,3 @@
+INSERT INTO `t_follow_relation` (`id`, `createdAt`, `updatedAt`, `dataVersion`, `deleted`, `creator`, `followingId`, `type`, `agreed`, `botImage`) VALUES (1, '2024-12-24 17:35:22', '2024-12-24 17:35:22', 0, 0, 100, 1, 'BOT', 0, NULL);
+INSERT INTO `t_follow_relation` (`id`, `createdAt`, `updatedAt`, `dataVersion`, `deleted`, `creator`, `followingId`, `type`, `agreed`, `botImage`) VALUES (2, '2024-12-24 17:35:22', '2024-12-24 17:35:22', 0, 0, 100, 2, 'USER', 0, NULL);
+INSERT INTO `t_follow_relation` (`id`, `createdAt`, `updatedAt`, `dataVersion`, `deleted`, `creator`, `followingId`, `type`, `agreed`, `botImage`) VALUES (3, '2024-12-24 17:35:22', '2024-12-24 17:35:22', 0, 0, 101, 999, 'BOT', 0, NULL);
