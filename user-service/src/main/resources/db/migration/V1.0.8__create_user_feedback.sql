@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS `user_feedback` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '用户反馈表id',
+    `userId` BIGINT NOT NULL COMMENT '用户id',
+    `username` VARCHAR(255) DEFAULT NULL COMMENT '用户昵称',
+    `email` VARCHAR(255) DEFAULT NULL COMMENT '用户邮箱',
+    `device` VARCHAR(255) DEFAULT NULL COMMENT '设备',
+    `systemVersion` VARCHAR(255) DEFAULT NULL COMMENT '系统版本',
+    `category` VARCHAR(255) NOT NULL COMMENT '反馈类型',
+    `title` VARCHAR(255) NOT NULL COMMENT '反馈标题',
+    `description` TEXT NOT NULL COMMENT '反馈详情',
+    `images` TEXT COMMENT '图片列表',
+    `video` TEXT COMMENT '视频',
+    `status` VARCHAR(20) NOT NULL COMMENT '反馈消息状态：waiting,replied,readReplied',
+    `submissionAt` DATETIME NOT NULL COMMENT '提交时间',
+    `replyAt` DATETIME DEFAULT NULL COMMENT '回复时间',
+    `replyContent` TEXT COMMENT '回复内容',
+    `replyImages` TEXT COMMENT '回复图片列表',
+    `createdAt` DATETIME DEFAULT NULL,
+    `updatedAt` DATETIME DEFAULT NULL,
+    `dataVersion` INT DEFAULT NULL COMMENT '数据版本，每更新一次+1',
+    `deleted` TINYINT DEFAULT '0' COMMENT '是否删除：0否，1是',
+    PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4

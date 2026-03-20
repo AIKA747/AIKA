@@ -1,0 +1,136 @@
+server:
+  servlet:
+    context-path: /user
+  port: 8081
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: aika-info@google.com
+    password: 123456
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      password: 123456
+      jedis:
+        pool:
+          enabled: true
+          max-wait: 5000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/aika_user?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: 123456
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    clean-on-validation-error: false
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: ${RABBITMQ_VIRTUAL_HOST:/}
+    port: 5672
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 10
+        prefetch: 1
+        auto-startup: true
+        default-requeue-rejected: true
+    template:
+      retry:
+        enabled: true
+        initial-interval: 1000ms
+        max-attempts: 3
+        max-interval: 10000ms
+        multiplier: 1
+  cloud:
+    nacos:
+      config:
+        enabled: false
+    aws:
+      ses:
+        enabled: false
+feign:
+  sentinel:
+    enabled: true
+mybatis-plus:
+  type-handlers-package: com.parsec.aika.common.hander
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+aws:
+  accessKey: accessKey
+  secretKey: secretKey
+  region: us-east-1
+  s3:
+    bucketName: bucketName
+    cndDomain: https://cndDomain.cloudfront.net
+    imageBucketName: imageBucketName
+    imageCndDomain: https://imageCndDomain.cloudfront.net
+#app配置
+app:
+  config:
+    googleLogin: false
+
+# 邮箱验证链接
+mail:
+  url:
+    register: https://baidu.com
+    reset: https://baidu.com
+    deleteUser: https://baidu.com
+google:
+  client:
+    id: 123456789
+org:
+  quartz:
+    jobStore:
+      useProperties: false
+      tablePrefix: QRTZ_
+      isClustered: true
+      clusterCheckinInterval: 5000
+      misfireThreshold: 60000
+      txIsolationLevelReadCommitted: true
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+    scheduler:
+      instanceName: ClusterQuartz
+      instanceId: AUTO
+      rmi:
+        export: false
+        proxy: false
+      wrapJobExecutionInUserTransaction: false
+
+jwt:
+  key: jwt_key
+  expireDays: 30
+
+nsfw:
+  url: http://nsfw.aikavision.com/check
+  username: 123456
+  password: 123456
+cloud:
+  aws:
+    credentials:
+      access-key: ${aws.accessKey}
+      secret-key: ${aws.secretKey}
+    region:
+      static: ${aws.region}

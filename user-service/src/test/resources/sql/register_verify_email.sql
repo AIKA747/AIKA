@@ -1,0 +1,5 @@
+INSERT INTO `user` (`id`, `username`, `avatar`, `phone`, `email`, `password`, `status`, `gender`, `bio`, `tags`, `country`, `countryCode`, `birthday`, `botTotal`, `subBotTotal`, `storyTotal`, `followerTotal`, `notifyFlag`, `lastLoginAt`, `lastShareStoryAt`, `lastReleaseBotAt`, `createdAt`, `creator`, `updatedAt`, `updater`, `dataVersion`, `deleted`)
+VALUES
+       (100000, 'ces01', NULL, NULL, '123456@qq.com', '123456', 'uncompleted', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, '2023-12-25 14:59:54', NULL, '2023-12-25 14:59:52', NULL, 1, 0),
+       (100001, 'ces022', NULL, NULL, '123456321@qq.com', '123456', 'unverified', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, '2023-12-25 14:59:54', NULL, '2023-12-25 14:59:52', NULL, 1, 0),
+       (100002, 'ces023233', NULL, NULL, '1234333321@qq.com', '123456', 'uncompleted', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, '2023-12-25 14:59:54', NULL, '2023-12-25 14:59:52', NULL, 1, 0);

@@ -1,0 +1,1 @@
+ALTER TABLE `aika_user`.`user` ADD COLUMN `nickname` VARCHAR(255) NULL COMMENT '用户昵称' AFTER `username`;

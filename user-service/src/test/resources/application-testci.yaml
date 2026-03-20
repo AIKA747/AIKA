@@ -1,0 +1,88 @@
+server:
+  servlet:
+    context-path: /user
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: aika-info@google.com
+    password: 123456
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  data:
+    redis:
+      host: redis
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql/aika_user?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: passwd
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    clean-on-validation-error: true
+  rabbitmq:
+    host: rabbitmq
+    username: guest
+    password: guest
+    virtual-host: ${RABBITMQ_VIRTUAL_HOST:/}
+    port: 5672
+feign:
+  sentinel:
+    enabled: true
+mybatis-plus:
+  type-handlers-package: com.parsec.aika.common.hander
+  configuration:
+    map-underscore-to-camel-case: false
+    # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+aws:
+  accessKey: accessKey
+  secretKey: secretKey
+  region: ap-southeast-2
+  s3:
+    bucketName: aika-demo
+#app配置
+app:
+  config:
+    googleLogin: false
+
+# 邮箱验证链接
+mail:
+  url:
+    register: https://baidu.com
+    reset: https://baidu.com
+    deleteUser: https://baidu.com
+google:
+  client:
+    id: 123456
+org:
+  quartz:
+    jobStore:
+      useProperties: false
+      tablePrefix: QRTZ_
+      isClustered: true
+      clusterCheckinInterval: 5000
+      misfireThreshold: 60000
+      txIsolationLevelReadCommitted: true
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+    scheduler:
+      instanceName: ClusterQuartz
+      instanceId: AUTO
+      rmi:
+        export: false
+        proxy: false
+      wrapJobExecutionInUserTransaction: false
+
+jwt:
+  key: cf44088ed94e455b804ee7c8c666f88d
+  expireDays: 30

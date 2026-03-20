@@ -1,0 +1,2 @@
+ALTER TABLE `push_job`
+    ADD COLUMN `sysJob` TINYINT DEFAULT 0 NOT NULL COMMENT '是否系统任务' AFTER `excutedAt`;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Feedback</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fff;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff;">
+    <tr>
+        <td style="padding: 20px 0;">
+            <img src="https://d2w02n628dlis7.cloudfront.net/public/20250516/9ea7d25b323742b186fc658c74fe1818.png"
+                 alt="AIKA Logo" border="0" style="height: 50px;">
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+            <h2 style="margin-top: 0;">There is a new feedback.</h2>
+            <p>We have received a comment or feedback message from a user. The following is a summary:</p>
+
+            <p><strong>Title:</strong> <span th:text="${feedbackType}">{Report type}</span></p>
+            <p><strong>Issue ID:</strong> <span th:text="${issueId}">{Issue ID}</span></p>
+            <p><strong>Username:</strong> <span th:text="${username}">{Username}</span></p>
+            <p><strong>Feedback time:</strong> <span th:text="${feedbackTime}">{Created Time}</span></p>
+
+            <p>You can check it via the AIKA Admin Panel:</p>
+            <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 15px;">
+                <tr>
+                    <td bgcolor="#0066cc" style="border-radius: 5px;">
+                        <a href="#" th:href="${url}"
+                           style="display: inline-block; padding: 10px 20px; color: #ffffff; text-decoration: none; font-weight: bold;">View
+                            Feedback</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px 0; font-size: 12px; color: #777; ">
+            <p>This email is automatically sent by the system. Please do not reply.</p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

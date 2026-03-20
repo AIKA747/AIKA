@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;
+                margin: 0;
+                padding: 0;
+                color: #4c455e;
+                font-size: 14px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you for your feedback</title>
+</head>
+
+<body style="height: 100%;margin: 0;padding: 0;color: #4c455e;font-size: 14px;">
+    <div style="box-sizing: border-box;width: 100%;padding: 0 70px;max-width: 800px;margin: auto;">
+        <img style="width: 80px;height: 80px; margin-bottom: 70px;border-radius: 12px;"
+            src="https://d2w02n628dlis7.cloudfront.net/public/20250516/9ea7d25b323742b186fc658c74fe1818.png" alt="logo">
+        <div
+            style="width: 100%;margin-bottom: 40px;color: #4c455e;font-weight: bold;font-size: 36px;text-align: center;">
+            <span th:text="${title}">Title</span>
+        </div>
+        <div style="width: 100%;margin-bottom: 40px;color: #4c455e;font-size: 18px;line-height: 24px;text-align: left;">
+            <span th:text="${description}">description</span>
+        </div>
+<!--        <a style="display: block;width: 225px;height: 48px;margin: 0 auto 40px;color: #ffffff;font-size: 18px;line-height: 48px;text-align: center;background-color: #1b1d25;border: none;border-radius: 8px;cursor: pointer;text-decoration: none;"-->
+<!--            th:href="${url}" th:text="${buttonText}">-->
+<!--            Button-->
+<!--        </a>-->
+        <div style="width: 100%;margin-bottom: 40px;color: #4c455e;font-size: 18px;line-height: 24px;text-align: left;">
+            <span>Please do not reply to this email.</span>
+        </div>
+    </div>
+</body>
+
+</html>
