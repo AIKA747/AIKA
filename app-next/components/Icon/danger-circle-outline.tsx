@@ -1,0 +1,18 @@
+import Svg, { G, Path, type SvgProps } from 'react-native-svg';
+
+interface IProps extends SvgProps {}
+
+export const DangerCircleOutline = (props: IProps) => {
+  return (
+    <Svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <G>
+        <Path d="M12 6.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V7a.75.75 0 0 1 .75-.75M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+        <Path
+          d="M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12 17.937 22.75 12 22.75 1.25 17.937 1.25 12M12 2.75a9.25 9.25 0 1 0 0 18.5 9.25 9.25 0 0 0 0-18.5"
+          clipRule="evenodd"
+          fillRule="evenodd"
+        />
+      </G>
+    </Svg>
+  );
+};

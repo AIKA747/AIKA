@@ -1,0 +1,140 @@
+{
+  "expo": {
+    "name": "aika",
+    "slug": "aika",
+    "version": "1.4.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "aika",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "bundleIdentifier": "com.umaylab.aisa",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "supportsTablet": true,
+      "usesAppleSignIn": true,
+      "entitlements": {
+        "aps-environment": "production",
+        "com.apple.developer.networking.wifi-info": true
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"],
+        "UIViewControllerBasedStatusBarAppearance": false,
+        "UITextInteractionEnabled": false,
+        "LiveTextInteractionEnabled": false
+      }
+    },
+    "android": {
+      "package": "com.umaylab.aika",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0B0C0A"
+      },
+      "permissions": ["android.permission.RECORD_AUDIO", "INTERNET"],
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-apple-authentication",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-google-signin/google-signin",
+      "react-native-compressor",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 120,
+          "resizeMode": "contain",
+          "backgroundColor": "#0B0C0A"
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access the microphone, after you can send voice messages."
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": false,
+          "supportsPictureInPicture": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access the photo album so that you can use these pictures when sending messages or in the settings.",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to use the photo after taking it, so you can send or use this photo.",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access the microphone, after you can send voice messages."
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "2.1.20",
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
+            "googleServicesFile": "./android/app/google-services.json"
+          },
+          "ios": {
+            "deploymentTarget": "15.1",
+            "useFrameworks": "static",
+            "forceStaticLinking": ["RNFBApp"],
+            "googleServicesFile": "./ios/GoogleService-Info.plist"
+          }
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos to your library for easy access and sharing.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/ProductSansBold.ttf",
+            "./assets/fonts/ProductSansBoldItalic.ttf",
+            "./assets/fonts/ProductSansItalic.ttf",
+            "./assets/fonts/ProductSansRegular.ttf",
+            "./assets/fonts/SpaceMono-Regular.ttf"
+          ]
+        }
+      ],
+      "expo-iap",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

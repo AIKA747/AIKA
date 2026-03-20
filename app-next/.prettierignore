@@ -1,0 +1,12 @@
+# .prettierignore
+node_modules/
+.expo/
+
+/android
+/ios
+
+/services
+
+package.json
+pnpm-lock.yaml
+.env

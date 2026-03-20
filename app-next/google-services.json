@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "600258585781",
+    "project_id": "aika-382ef",
+    "storage_bucket": "aika-382ef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600258585781:android:c30acebcfa9eaadd064afc",
+        "android_client_info": {
+          "package_name": "com.umaylab.aika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600258585781-ug9k5ccof7s6jfi66h6cb2m1g6ocd41d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.umaylab.aika",
+            "certificate_hash": "3c29cb20ea87c6eb969999b455d3ea5e5aa66ab7"
+          }
+        },
+        {
+          "client_id": "600258585781-j390oma5qjsp22r450jtr25gdbkr14p9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMyIlmf2QlH2VIGkIawszlAr0aDsUx0Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600258585781-j390oma5qjsp22r450jtr25gdbkr14p9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "600258585781-5d2slqlpdhtrhiro3vt48mml5uo2rt2c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.umaylab.aisa",
+                "app_store_id": "6745216707"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

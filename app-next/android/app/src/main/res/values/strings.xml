@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">aika</string>
+  <string name="expo_system_ui_user_interface_style" translatable="false">automatic</string>
+  <string name="expo_splash_screen_resize_mode" translatable="false">contain</string>
+  <string name="expo_splash_screen_status_bar_translucent" translatable="false">false</string>
+  <string name="facebook_app_id">992396152422317</string>
+  <string name="facebook_client_token">bf68bdf20683fd783a5ff8545f2d289c</string>
+</resources>
