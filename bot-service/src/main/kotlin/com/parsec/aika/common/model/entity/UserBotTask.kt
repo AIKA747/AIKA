@@ -1,0 +1,77 @@
+package com.parsec.aika.common.model.entity
+
+import com.baomidou.mybatisplus.annotation.*
+import com.fasterxml.jackson.databind.annotation.JsonSerialize
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer
+import java.io.Serializable
+import java.time.LocalDateTime
+
+/**
+ *      `id` int NOT NULL AUTO_INCREMENT,
+ *      `type` varchar(255) NOT NULL COMMENT '任务类型：REMINDER，WEBSEARCH',
+ *      `name` varchar(255) NOT NULL COMMENT '任务名称',
+ *      `introduction` varchar(500) CHARACTER SET utf8mb4 NOT NULL COMMENT '任务简介',
+ *      `cron` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '任务执行频次',
+ *      `lastExcetedAt` datetime DEFAULT NULL COMMENT '最后一次执行任务的时间',
+ *      `creater` bigint NOT NULL COMMENT '创建者',
+ *      `botId` bigint NOT NULL COMMENT '机器人id',
+ *      `status` varchar(255) NOT NULL COMMENT '任务状态：\n待确认 → PENDING\n启用 → ENABLED\n停用 → DISABLED',
+ *      `prompt` varchar(255) NOT NULL COMMENT '用于调用openai执行任务的提示语',
+ *      `json` json DEFAULT NULL COMMENT '辅助前端做频率参数设置的参数，后端不做使用，前端自行解析',
+ *      `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+ *      `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+ *      `deleted` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
+ */
+@TableName("user_bot_task")
+open class UserBotTask : Serializable {
+
+    @TableId(type = IdType.AUTO)
+    var id: Int? = null
+
+    var type: BotTaskType? = null
+
+    var name: String? = null
+
+    var introduction: String? = null
+
+    var message: String? = null
+
+    var cron: String? = null
+
+    var lastExcetedAt: LocalDateTime? = null
+
+    @JsonSerialize(using = ToStringSerializer::class)
+    var creater: Long? = null
+
+    @JsonSerialize(using = ToStringSerializer::class)
+    var botId: Long? = null
+
+    /**
+     * 任务状态：\n待确认 → PENDING\n启用 → ENABLED\n停用 → DISABLED
+     */
+    var status: BotTaskStatus? = null
+
+    var prompt: String? = null
+
+    var json: String? = null
+
+    @TableField(fill = FieldFill.INSERT)
+    var createdAt: LocalDateTime? = null
+
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    var updatedAt: LocalDateTime? = null
+
+    @TableLogic(value = "0", delval = "1")
+    var deleted: Boolean? = null
+
+    var executeLimit: Int? = null
+
+}
+
+enum class BotTaskStatus {
+    PENDING, ENABLED, DISABLED
+}
+
+enum class BotTaskType {
+    REMINDER, WEBSEARCH, EXECUTEONCE
+}

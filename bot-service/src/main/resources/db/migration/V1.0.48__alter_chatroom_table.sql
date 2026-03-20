@@ -1,0 +1,2 @@
+ALTER TABLE `t_chatroom`
+    ADD COLUMN `creatorType` VARCHAR(255) DEFAULT 'APPUSER' NOT NULL COMMENT '创建者类型：ADMINUSER,APPUSER' AFTER `joinDirectly`;

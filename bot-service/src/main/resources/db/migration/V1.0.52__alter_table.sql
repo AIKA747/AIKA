@@ -1,0 +1,2 @@
+ALTER TABLE `t_message_feature`
+    ADD COLUMN `ct` VARCHAR(255) DEFAULT 'TEXT' NOT NULL COMMENT '消息类型' AFTER `uid`;

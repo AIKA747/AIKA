@@ -1,0 +1,6 @@
+INSERT INTO `assistant` (`id`, `maleAvatar`, `femaleAvatar`, `greetWords`, `age`, `profession`, `botCharacter`, `personalStrength`, `answerStrategy`, `botRecommendStrategy`, `storyRecommendStrategy`, `rules`, `salutationPrompts`, `salutationFrequency`, `prompts`, `digitaHumanService`, `createdAt`, `updatedAt`, `dataVersion`, `deleted`)
+VALUES
+    (1000, 'https://img0.baidu.com/it/u=2383759541,1098368289&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500', 'https://img0.baidu.com/it/u=1102326282,1067783974&fm=253&fmt=auto&app=138&f=JPEG?w=389&h=389', '你好，有什么需要帮助的吗', 18, '助手', '开心果', '精通各种沟通、开导', '主打开导', 'random', 'random', '[{\"key\": \"不开心\", \"rule\": {\"answer\": \"kaix\", \"weight\": 20, \"question\": \"adf\"}}]', '开心', 1, 'asdfadf', '[\"aa\", \"bb\"]', '2024-02-06 11:29:22', '2024-02-06 11:29:22', 1, 0);
+
+
+INSERT INTO `assistant_msg_record` (`id`, `sourceType`, `userId`, `assistantId`, `assistantGender`, `contentType`, `json`, `media`, `textContent`, `msgStatus`, `readFlag`, `readTime`, `replyMessageId`, `creator`, `creatorName`, `createdAt`, `updatedAt`, `dataVersion`, `deleted`) VALUES (NULL, 'user', '1000', '1000', 'MALE', 'TEXT', NULL, NULL, '你好', 'created', '0', NULL, NULL, '1000', NULL, '2024-02-22 03:13:29', '2024-02-22 03:13:29', NULL, '0');

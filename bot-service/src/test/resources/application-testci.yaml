@@ -1,0 +1,61 @@
+server:
+  servlet:
+    context-path: /bot
+spring:
+  redis:
+    host: redis
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql/aika_bot?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: passwd
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    clean-on-validation-error: true
+feign:
+  sentinel:
+    enabled: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+aws:
+  accessKey: sdfsdfsdf
+  secretKey: sdfsdfsdfsdfdsfdsfsdf
+  region: ap-south-1
+  s3:
+    bucketName: aikafile
+mj:
+  server-url: ${MJ_SERVER:http://104.225.232.210:9080}
+  api-secret: ${MJ_API_SECRET:abc123456}
+webhook:
+  server-domian: https://api-test.aikavision.com
+did:
+  api-key: Basic Y23423432432432432423423
+tts:
+  microsoft:
+    speechSubscriptionKey: 34234324sdfsdfsdfsdfdsfdsf
+    serviceRegion: eastus
+openai:
+  proxy:
+    enabled: false
+    host: 127.0.0.1
+    port: 7890
+  openai-api-key: xfgfdgdfgdfgdfgfdgfdgdfgdfg
+  temp-file-dir: /aika/gpt/files
+  chatgpt:
+    model: gpt-4o-mini
+chat:
+  user:
+    videoGenerateNum: 200

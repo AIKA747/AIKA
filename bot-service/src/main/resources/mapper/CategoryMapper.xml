@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.parsec.aika.common.mapper.CategoryMapper">
+    <resultMap id="BaseResultMap" type="com.parsec.aika.common.model.entity.Category">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="botCount" jdbcType="INTEGER" property="botCount" />
+        <result column="categoryName" jdbcType="VARCHAR" property="categoryName" />
+        <result column="cover" jdbcType="VARCHAR" property="cover" />
+        <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+        <result column="sortNo" jdbcType="INTEGER" property="sortNo" />
+        <result column="builtIn" jdbcType="BIT" property="builtIn" />
+        <result column="creator" jdbcType="BIGINT" property="creator" />
+        <result column="creatorName" jdbcType="VARCHAR" property="creatorName" />
+        <result column="updater" jdbcType="BIGINT" property="updater" />
+        <result column="tags" jdbcType="VARCHAR" property="tags" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler" />
+        <result column="createdAt" jdbcType="TIMESTAMP" property="createdAt" />
+    </resultMap>
+    <resultMap id="GetAppBotCategoryResp" type="com.parsec.aika.bot.model.vo.resp.GetAppBotCategoryResp">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="categoryName" jdbcType="VARCHAR" property="categoryName" />
+        <result column="cover" jdbcType="VARCHAR" property="cover" />
+        <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+        <result column="tags" jdbcType="VARCHAR" property="tags" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler" />
+    </resultMap>
+
+    <resultMap id="ManageCategoryListMap" type="com.parsec.aika.bot.model.vo.resp.ManageCategoryListVo">
+        <id column="id" jdbcType="BIGINT" property="categoryId" />
+        <result column="botCount" jdbcType="INTEGER" property="botCount" />
+        <result column="categoryName" jdbcType="VARCHAR" property="categoryName" />
+        <result column="cover" jdbcType="VARCHAR" property="cover" />
+        <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+        <result column="sortNo" jdbcType="INTEGER" property="sortNo" />
+        <result column="builtIn" jdbcType="BIT" property="builtIn" />
+        <result column="tags" jdbcType="VARCHAR" property="tags" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler" />
+        <result column="createdAt" jdbcType="TIMESTAMP" property="createdAt" />
+    </resultMap>
+    <select id="getAppBotCategory" parameterType="com.parsec.aika.bot.model.vo.req.GetAppBotCategoryReq" resultMap="GetAppBotCategoryResp">
+        select id, categoryName, cover, introduction, tags
+        from category
+        where deleted = 0
+        <if test = 'req.categoryName != null'>
+            and categoryName like concat('%', #{req.categoryName}, '%')
+        </if>
+        order by sortNo asc,id desc
+    </select>
+
+    <select id="categoryList" resultMap="ManageCategoryListMap">
+        select
+            id as categoryId, categoryName, cover, botCount, builtIn, createdAt,
+            introduction, sortNo, tags
+        from category
+        where deleted = 0 order by sortNo asc
+    </select>
+</mapper>

@@ -1,0 +1,79 @@
+server:
+  servlet:
+    context-path: /bot
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    jedis:
+      pool:
+        enabled: true
+        max-wait: 5000
+    password: 123456
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/aika_bot?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    clean-on-validation-error: false
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+feign:
+  sentinel:
+    enabled: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+aws:
+  accessKey: sdfsdfsdf
+  secretKey: sdfsdfsdfsdfdsfdsfsdf
+  region: ap-south-1
+  s3:
+    bucketName: aikafile
+mj:
+  server-url: ${MJ_SERVER:}
+  api-secret: ${MJ_API_SECRET:}
+webhook:
+  server-domian: https://api-test.aikavision.com
+did:
+  api-key: Basic Y23423432432432432423423
+tts:
+  microsoft:
+    speechSubscriptionKey: 34234324sdfsdfsdfsdfdsfdsf
+    serviceRegion: eastus
+ai:
+  temp-file-dir: /aika/gpt/files
+  openai:
+    api-key: sk-123456789
+    model: gpt-4o-mini
+    url: https://api.openai.com/v1/chat/completions
+    proxy:
+      enabled: true
+      host: 127.0.0.1
+      port: 7890
+  deepseek:
+    api-key: sk-123456789
+    model: deepseek-chat
+    url: https://api.deepseek.com/chat/completions
+chat:
+  user:
+    videoGenerateNum: 200

@@ -1,0 +1,25 @@
+CREATE TABLE `game_message_record`
+(
+    `id`             BIGINT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键id',
+    `threadId`       VARCHAR(255) NOT NULL COMMENT '游戏聊天对应threadId',
+    `userId`         BIGINT       NOT NULL COMMENT '用户id',
+    `contentType`    VARCHAR(255) NOT NULL COMMENT 'TEXT，VOICE，IMAGE，VIDEO，MD',
+    `gameQuestion`   TINYINT      NOT NULL COMMENT '是否为游戏问题或答复：0否，1是（若为true会在结算时加入thread聊天历史记录生成游戏结果）',
+    `gameStatus`     VARCHAR(255) CHARACTER SET utf8mb4                            DEFAULT NULL COMMENT '游戏状态：COMPLETE，UNCOMPLETED',
+    `textContent`    VARCHAR(1000) CHARACTER SET utf8mb4                           DEFAULT NULL COMMENT '文本内容',
+    `media`          VARCHAR(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '多媒体（oss文件链接）',
+    `fileProperty`   TEXT,
+    `sourceType`     VARCHAR(255) NOT NULL COMMENT '来源类型：user,game',
+    `msgStatus`      VARCHAR(100) NOT NULL COMMENT '消息状态：created, processing, success, fail',
+    `readFlag`       TINYINT      NOT NULL COMMENT '已读标记：0未读，1已读',
+    `readTime`       DATETIME                                                      DEFAULT NULL COMMENT '读取消息时间',
+    `replyMessageId` BIGINT                                                        DEFAULT NULL COMMENT '机器人回复消息id',
+    `createdAt`      DATETIME     NOT NULL COMMENT '创建时间',
+    `creator`        VARCHAR(255)                                                  DEFAULT NULL COMMENT '创建人id',
+    `creatorName`    VARCHAR(255)                                                  DEFAULT NULL COMMENT '创建人名称',
+    `updatedAt`      DATETIME     NOT NULL COMMENT '更新时间',
+    `updater`        VARCHAR(255)                                                  DEFAULT NULL COMMENT '更新人',
+    `dataVersion`    INT                                                           DEFAULT NULL COMMENT '数据版本，每更新一次+1',
+    `deleted`        TINYINT      NOT NULL                                         DEFAULT '0' COMMENT '是否删除：0否，1是',
+    PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT='game聊天消息记录';

@@ -1,0 +1,1 @@
+ALTER TABLE `gpt_req_log` ADD COLUMN `respStatus` INT NULL COMMENT '响应状态码' AFTER `reqParams`;

@@ -1,0 +1,1 @@
+truncate table game_message_record;
