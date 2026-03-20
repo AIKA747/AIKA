@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: aika-order-service
+  profiles:
+    active: ${NACOS_NS:local}
+  cloud:
+    nacos:
+      username: ${NACOS_USERNAME:aika-service}
+      password: ${NACOS_PASSWORD:aika321654.}
+      server-addr: ${NACOS_ADDR:nacos.aikavision.com:80}
+      config:
+        namespace: ${NACOS_NS:public}
+        file-extension: yaml
+        extension-configs[0]:
+          data-id: rabbitmq.yaml
+      discovery:
+        namespace: ${NACOS_NS:public}
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+trantor:
+  redis:
+    prefix: aika

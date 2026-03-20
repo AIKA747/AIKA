@@ -1,0 +1,4 @@
+INSERT INTO `order`(`id`, `orderNo`, `userId`, `username`, `phone`, `email`, `amount`, `packageId`, `packageName`, `status`, `callbackAt`, `cancelAt`, `expiredAt`, `country`, `createdAt`, `creator`, `creatorName`, `updatedAt`, `updater`, `dataVersion`, `deleted`)
+VALUES
+    (1, '123123123', 1, 'yyl', '18375729810', '123@163.com', 1, 1, 'pack', 'Success', '2024-01-09 16:47:57', '2024-01-09 16:47:59', '2024-01-09 16:48:02', 'china', '2024-01-09 16:48:11', '1', 'yyl', '2024-01-09 16:48:17', '1', NULL, 0),
+    (2, '321321321', 1, 'yyl', '18375729810', '123@163.com', 1, 1, 'pack', 'Success', '2024-01-09 16:47:57', '2024-01-09 16:47:59', '2024-01-09 16:48:02', 'china', '2024-01-09 16:48:11', '1', 'yyl', '2024-01-09 16:48:17', '1', NULL, 0);

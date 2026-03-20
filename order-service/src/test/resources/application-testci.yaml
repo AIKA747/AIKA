@@ -1,0 +1,39 @@
+server:
+  servlet:
+    context-path: /order
+spring:
+  redis:
+    host: redis
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql/aika_order?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: passwd
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    clean-on-validation-error: true
+feign:
+  sentinel:
+    enabled: true
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: error
+    com.parsec: info
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+stripe:
+  publicKey: 123456789
+  secretKey: 123456789
+  endpointSecret: whsec_32d72866a19f086d149625a470e8ef4986e3de7e9095d33daa7eebb9b746ddf1
+freedompay:
+  merchantId: 123456789
+  secretKey: 123456789
+  domain: https://test-api.freedompay.money
+  initPayment: init_payment.php
+  getStatus: get_status3.php
+  resultUrl: https://api.aikavision.com/order/public/freedompay/result
+  successUrl: https://www.baidu.com
+  failureUrl: https://www.baidu.com

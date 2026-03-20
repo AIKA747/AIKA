@@ -1,0 +1,4 @@
+INSERT INTO `payment`(`id`, `payMethod`, `type`, `amount`, `payNo`, `orderNo`, `status`, `reason`, `refundNo`, `payTime`, `callbackTime`, `creditCard`, `createdAt`, `creator`, `creatorName`, `updatedAt`, `updater`, `dataVersion`, `deleted`)
+VALUES
+    (1, 'WeChat', 'Payment', 1, '123123123', '123123123', 'success', '', NULL, '2024-01-09 15:37:34', '2024-01-09 15:37:37', '3123123', '2024-01-09 15:37:49', '1', 'yyl', '2024-01-09 15:37:56', '1', NULL, 0),
+    (2, 'Alipay', 'Payment', 1, '321312321', '321321321', 'success', '', NULL, '2024-01-09 15:37:34', '2024-01-09 15:37:37', '3123123', '2024-01-09 15:37:49', '1', 'yyl', '2024-01-09 15:37:56', '1', NULL, 0);
