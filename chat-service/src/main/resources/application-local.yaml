@@ -1,0 +1,33 @@
+server:
+  servlet:
+    context-path: /chat
+#mqtt配置项
+mqtt:
+  broker: wss://api-test.aikavision.com:443
+  username: chatservice123456
+  password: chatservice123456
+  clientId: ${spring.application.name}-${random.int(10000,99999)}
+  botTopic: chat/bot/topic/{}
+  userTopic: chat/user/topic/{}
+  qos: 1
+logging:
+  level:
+    root: error
+    com.parsec: info
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    database: 0
+    jedis:
+      pool:
+        enabled: true
+        max-wait: 5000
+  cloud:
+    nacos:
+      config:
+        enabled: false
+jwt:
+  key: cf44088ed94e455b804ee7c8c666f88d
+  expireDays: 30

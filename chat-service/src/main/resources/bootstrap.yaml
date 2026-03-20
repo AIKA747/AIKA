@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: aika-chat-service
+  profiles:
+    active: ${NACOS_NS:local}
+  cloud:
+    nacos:
+      username: ${NACOS_USERNAME:}
+      password: ${NACOS_PASSWORD:}
+      server-addr: ${NACOS_ADDR:}
+      config:
+        namespace: ${NACOS_NS:public}
+        file-extension: yaml
+        extension-configs[0]:
+          data-id: rabbitmq.yaml
+        extension-configs[1]:
+          data-id: jwt-key.yaml
+          refresh: true
+      discovery:
+        namespace: ${NACOS_NS:public}
+trantor:
+  redis:
+    prefix: aika
