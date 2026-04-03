@@ -886,6 +886,10 @@ aika/
     └── package.json
 ```
 
+## Documentation
+
+For detailed documentation and API references, visit: https://claude.ai/public/artifacts/4263e826-91fd-400c-befd-51d3211913f9
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
